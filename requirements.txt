@@ -2,5 +2,5 @@ frappe
 bs4
 factur-x
 unidecode
-opencv-python
+opencv-python-headless
 pymupdf
