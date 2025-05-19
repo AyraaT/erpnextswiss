@@ -7,7 +7,15 @@
 import fitz             # part of pymupdf (note: for Py3.5, use pymupdf==1.16.18)
 import os
 from PIL import Image
-import cv2              # part of opencv-python
+# Alternative for Shared environment
+try:
+    import cv2
+    OPENCV_AVAILABLE = True
+except ImportError:
+    cv2 = None
+    OPENCV_AVAILABLE = False
+# OLD CODE
+#import cv2              # part of opencv-python
 import numpy as np
 import frappe
 from frappe.utils import flt
